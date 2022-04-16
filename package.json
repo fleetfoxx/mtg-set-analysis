@@ -1,5 +1,6 @@
 {
   "name": "mtg-set-analysis",
+  "homepage": "/mtg-set-analysis",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

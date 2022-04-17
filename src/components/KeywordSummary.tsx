@@ -67,7 +67,7 @@ const KeywordSummary = ({ cards }: Props) => {
       {
         label: "Count",
         data: counts.map((c) => c.count),
-        backgroundColor: "#003f5c",
+        backgroundColor: "#0d6efd",
       },
     ],
   };

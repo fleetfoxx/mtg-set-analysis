@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Bar } from "react-chartjs-2";
 import styled from "styled-components";
 import ScryfallCard from "../scryfall/types/ScryfallCard";
@@ -18,7 +19,7 @@ ChartJS.register(
   LinearScale,
   BarElement,
   Title,
-  Tooltip,
+  Tooltip
   // Legend
 );
 
@@ -83,7 +84,7 @@ const CreatureSummaries = ({ cards }: Props) => {
       {
         label: "Toughness",
         data: getChartData(creatures, labels, (c) => c.toughness!),
-        backgroundColor: "blue",
+        backgroundColor: "#0d6efd",
       },
     ],
   };
@@ -105,7 +106,19 @@ const CreatureSummaries = ({ cards }: Props) => {
       </label>
 
       <ChartWrapper>
-        <Bar options={{ responsive: true }} data={data} />
+        <Bar
+          plugins={[ChartDataLabels]}
+          options={{
+            responsive: true,
+            plugins: {
+              datalabels: {
+                anchor: "center",
+                color: "#fefefe",
+              },
+            },
+          }}
+          data={data}
+        />
       </ChartWrapper>
     </Layout>
   );

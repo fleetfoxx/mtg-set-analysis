@@ -7,6 +7,7 @@ import {
   Title,
   Tooltip,
 } from "chart.js";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 import styled from "styled-components";
 import ScryfallCard from "../scryfall/types/ScryfallCard";
 import { Bar } from "react-chartjs-2";
@@ -17,7 +18,7 @@ ChartJS.register(
   LinearScale,
   BarElement,
   Title,
-  Tooltip,
+  Tooltip
   // Legend
 );
 
@@ -102,6 +103,7 @@ const ColorSummaries = ({ cards }: Props) => {
           goldCount,
           colorlessCount,
         ],
+        backgroundColor: "#0d6efd",
       },
     ],
   };
@@ -109,7 +111,19 @@ const ColorSummaries = ({ cards }: Props) => {
   return (
     <Layout>
       <ChartWrapper>
-        <Bar options={{ responsive: true }} data={data} />
+        <Bar
+          plugins={[ChartDataLabels]}
+          options={{
+            responsive: true,
+            plugins: {
+              datalabels: {
+                anchor: "center",
+                color: "#fefefe",
+              },
+            },
+          }}
+          data={data}
+        />
       </ChartWrapper>
     </Layout>
   );

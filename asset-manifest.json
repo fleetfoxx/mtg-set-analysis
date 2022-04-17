@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/mtg-set-analysis/static/css/main.fd6bc66f.css",
-    "main.js": "/mtg-set-analysis/static/js/main.c0968071.js",
+    "main.js": "/mtg-set-analysis/static/js/main.d4dc15f2.js",
     "index.html": "/mtg-set-analysis/index.html",
     "main.fd6bc66f.css.map": "/mtg-set-analysis/static/css/main.fd6bc66f.css.map",
-    "main.c0968071.js.map": "/mtg-set-analysis/static/js/main.c0968071.js.map"
+    "main.d4dc15f2.js.map": "/mtg-set-analysis/static/js/main.d4dc15f2.js.map"
   },
   "entrypoints": [
     "static/css/main.fd6bc66f.css",
-    "static/js/main.c0968071.js"
+    "static/js/main.d4dc15f2.js"
   ]
 }
